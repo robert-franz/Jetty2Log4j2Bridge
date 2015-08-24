@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<TestAppender name="testAppender" />
+	</Appenders>
+	<Loggers>
+		<Root level="TRACE">
+			<AppenderRef ref="testAppender" />
+		</Root>
+	</Loggers>
+</Configuration>

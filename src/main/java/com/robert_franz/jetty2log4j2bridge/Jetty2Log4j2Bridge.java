@@ -89,6 +89,6 @@ public class Jetty2Log4j2Bridge extends AbstractLogger
 
 	public void ignore(Throwable ignored)
 	{
-		// ignored
+		logger.catching(Level.TRACE, ignored);
 	}
 }

@@ -71,7 +71,9 @@ public class Jetty2Log4j2BridgeTest
 		testable.debug("debug:{}", "text");
 		assertLog(Level.DEBUG, "debug:text", null);
 
-		testable.ignore(new Throwable("ignore"));
+		Throwable tig = new Throwable("ignore");
+		testable.ignore(tig);
+		assertLog(Level.TRACE, "catching", tig);
 	}
 
 	private void assertLog(Level level, String message, Throwable throwable)
